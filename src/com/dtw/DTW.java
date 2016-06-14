@@ -1,5 +1,33 @@
-package com.dtw;
+/*******************************************************
+ 
+Copyright (c) 2004 Stan Salvador 
 
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*****************************************************************/
+
+
+
+
+package com.dtw;
 import java.util.ArrayList;
 import java.util.List;
 import Gesture.Gesture;
@@ -9,7 +37,7 @@ import com.util.ShowPath;
 
 public class DTW{
 	
-   //No TimeSeries  kind:1 ∞Ê∑Œø¨ªÍ X
+   //No TimeSeries  kind:1 Í≤ΩÎ°úÏó∞ÏÇ∞ X
    public static double DynamicTimeWarp(Gesture tsI, Gesture tsJ)
    {
      
@@ -22,13 +50,13 @@ public class DTW{
 
      // List<DTWPath> pathList = new ArrayList<DTWPath>();
       
-      costMatrix[0][0] = EuclideanDistance.calcDistance(tsI.get(0),  tsJ.get(0)); // √ ±‚¿«  ¿Ø≈¨∏ÆµÂ ∞≈∏Æ∏¶ Matrixø° ¿‘∑¬«—¥Ÿ.
+      costMatrix[0][0] = EuclideanDistance.calcDistance(tsI.get(0),  tsJ.get(0)); // Ï¥àÍ∏∞Ïùò  Ïú†ÌÅ¥Î¶¨Îìú Í±∞Î¶¨Î•º MatrixÏóê ÏûÖÎ†•ÌïúÎã§.
       
-      for (int j=1; j<=maxJ; j++) // ∞°¿Â ¡¬√¯  i == 0 ¿Œ Matrix∏¶ ¿‘∑¬
+      for (int j=1; j<=maxJ; j++) // Í∞ÄÏû• Ï¢åÏ∏°  i == 0 Ïù∏ MatrixÎ•º ÏûÖÎ†•
          costMatrix[0][j] = costMatrix[0][j-1] + EuclideanDistance.calcDistance(tsI.get(0), tsJ.get(j));
       
 
-      //µø¿˚ ∞Ë»ππ˝ø° ±‚π›«— global cost matrix ª˝º∫
+      //ÎèôÏ†Å Í≥ÑÌöçÎ≤ïÏóê Í∏∞Î∞òÌïú global cost matrix ÏÉùÏÑ±
       for (int i=1; i<=maxI; i++)   // i = columns
       {
       
@@ -47,7 +75,7 @@ public class DTW{
       
       
   
-      //∞Ê∑Œ ≈Ωªˆ
+      //Í≤ΩÎ°ú ÌÉêÏÉâ
       /*
       final double minimumCost = costMatrix[maxI][maxJ];
      
@@ -108,7 +136,7 @@ public class DTW{
    
    
    
-   //No TimeSeries kind2: ∞Ê∑Œπ›»Ø
+   //No TimeSeries kind2: Í≤ΩÎ°úÎ∞òÌôò
    public static ShowPath DynamicTimeWarp_RetPath(Gesture tsI, Gesture tsJ)
    {
 
@@ -126,15 +154,15 @@ public class DTW{
       List<DTWPath> pathList = new ArrayList<DTWPath>();
       
      
-      costMatrix[0][0] = EuclideanDistance.calcDistance(tsI.get(0), tsJ.get(0)); // √ ±‚¿«  ¿Ø≈¨∏ÆµÂ ∞≈∏Æ∏¶ Matrixø° ¿‘∑¬«—¥Ÿ.
+      costMatrix[0][0] = EuclideanDistance.calcDistance(tsI.get(0), tsJ.get(0)); // Ï¥àÍ∏∞Ïùò  Ïú†ÌÅ¥Î¶¨Îìú Í±∞Î¶¨Î•º MatrixÏóê ÏûÖÎ†•ÌïúÎã§.
       
-      for (int j=1; j<=maxJ; j++) // ∞°¿Â ¡¬√¯  i == 0 ¿Œ Matrix∏¶ ¿‘∑¬
+      for (int j=1; j<=maxJ; j++) // Í∞ÄÏû• Ï¢åÏ∏°  i == 0 Ïù∏ MatrixÎ•º ÏûÖÎ†•
          costMatrix[0][j] = costMatrix[0][j-1] + EuclideanDistance.calcDistance(tsI.get(0), tsJ.get(j));
 
       
       
       
-      //∞Ê∑Œ ≈Ωªˆ
+      //Í≤ΩÎ°ú ÌÉêÏÉâ
       for (int i=1; i<=maxI; i++)   // i = columns
       {
          
@@ -146,7 +174,7 @@ public class DTW{
             final double minGlobalCost = Math.min(costMatrix[i-1][j],
                                                   Math.min(costMatrix[i-1][j-1],
                                                            costMatrix[i][j-1]));
-            // µŒ ¡¬«•∞™¡ﬂ ¿€¿∫ ∞™¿ª minGlobalCost∑Œ
+            // Îëê Ï¢åÌëúÍ∞íÏ§ë ÏûëÏùÄ Í∞íÏùÑ minGlobalCostÎ°ú
             costMatrix[i][j] = minGlobalCost + EuclideanDistance.calcDistance(tsI.get(i), tsJ.get(j));
   
          }  
