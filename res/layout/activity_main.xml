@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    
+    tools:context=".MainActivity" >
+
+   
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+    
+      <Button
+        android:id="@+id/training"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+    
+        android:text="트레이닝"
+        android:layout_weight="1"
+        android:textSize="25sp" />
+      
+      
+         <Button
+        android:id="@+id/simi"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        
+        android:text="유사모델"
+         android:layout_weight="1"
+        android:textSize="25sp" />
+         
+        
+        </LinearLayout>
+         
+         
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+      
+          <Button
+        android:id="@+id/deleteAll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="모델삭제"
+         android:layout_weight="1"
+        android:textSize="25sp" />
+          
+           <Button
+        android:id="@+id/pc"
+   	 android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="파빗확인"
+       android:layout_weight="1"
+        android:textSize="25sp" />
+           
+        </LinearLayout> 
+           
+           
+           
+    
+    
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+           
+             <Button
+        android:id="@+id/finish_recog"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+      android:layout_weight="1"
+        android:text="서비스 종료"
+        android:textSize="25sp" />
+             
+                 
+             <Button
+        android:id="@+id/finish_app"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="앱 종료"
+        android:textSize="25sp" />
+             
+        </LinearLayout> 
+        
+           <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+        
+        <Button
+        android:id="@+id/recog_key"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+      android:layout_weight="1"
+        android:text="키로 인식"
+        android:textSize="25sp" />
+             
+        
+        <Button
+        android:id="@+id/recog_auto"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+      android:layout_weight="1"
+        android:text="자동 인식"
+        android:textSize="25sp" />
+        
+        
+    
+             
+             
+         </LinearLayout>    
+         
+            <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+           
+           <Button
+        android:id="@+id/pbdel"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+      android:layout_weight="1"
+        android:text="팟빗삭제"
+        android:textSize="25sp" />
+           
+           
+         <Button
+        android:id="@+id/mg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="중앙동작"
+        android:textSize="25sp" />
+                  
+         
+        </LinearLayout>    
+           
+        
+
+</LinearLayout>

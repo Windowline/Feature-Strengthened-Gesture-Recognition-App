@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gestureapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        
+        <activity
+            android:name="com.example.gestureapp.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name="com.example.gestureapp.training"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+         <activity
+            android:name="com.example.gestureapp.Tarining2"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+            
+        <activity
+            android:name="com.example.gestureapp.recognition_btn"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+            
+        <service
+            android:name="com.example.gestureapp.recognition"
+            android:label="@string/app_name"
+            android:enabled="true">
+            
+                     <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </service>   
+        
+        
+        
+           <service
+            android:name="com.example.gestureapp.recognition_sv"
+            android:label="@string/app_name"
+            android:enabled="true">
+            
+                     <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </service>   
+       
+        
+        
+        
+        
+          <activity
+            android:name="test.AppList"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+          
+          
+          
+           <activity
+            android:name="test2.ACT_button"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+          
+          
+          
+          
+          
+ <receiver android:name="com.example.gestureapp.buttonRecognizer">
+    <intent-filter>
+        <action android:name="android.intent.action.MEDIA_BUTTON" />
+    </intent-filter>
+</receiver>
+          
+          
+       
+ 
+ 
+ 
+ 
+ <receiver android:name="test2.BCR_button">
+<intent-filter>
+<action android:name="android.intent.action.MEDIA_BUTTON" />
+</intent-filter>
+</receiver> 
+          
+ 
+ 
+ 
+ <receiver android:name="com.example.gestureapp.SVReceiver">
+            <intent-filter>
+                <action android:name="auto_recog_start"></action>
+                 <action android:name="auto_recog_end"></action>
+            	<action android:name="dtw_and_exe_app"></action>
+                
+                
+            </intent-filter>
+        </receiver>  
+ 
+ 
+ 
+        
+    </application>
+
+</manifest>
