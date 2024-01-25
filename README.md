@@ -1,5 +1,9 @@
-# GestureApp
+# 특징강조형 Gesture Recognition App
 직접 정의한 제스처를 통하여 원하는 프로그램을 실행 (Android App, 2014.08 ~ 2014.11) 
+가속도 센서 + Dynamic Time Wrapping 기반
+인식률 향상을 위한 기법으로 하단 논문의 기법을 응용합니다.
+https://doi.org/10.3745/KTSDE.2015.4.3.143
+
 
 
 정확도나 성능의 비교를 위해서 여러 인식 방법을 시도했었고, 잔재가 남아있습니다.
